@@ -537,4 +537,8 @@
     <string name="fp_wake_unlock_touch">Touch</string>
     <string name="fp_wake_unlock_press">Press</string>
 
+    <!-- Backup Transport selection settings menu and activity title -->
+    <string name="backup_transport_setting_label">Change backup provider</string>
+    <string name="backup_transport_title">Select backup provider</string>
+
 </resources>
