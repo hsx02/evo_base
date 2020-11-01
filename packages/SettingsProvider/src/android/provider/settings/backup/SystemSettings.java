@@ -118,5 +118,6 @@ public class SystemSettings {
         Settings.System.SENSOR_BLOCK,
         Settings.System.HEADS_UP_NOTIFICATIONS_THRESHOLD,
         Settings.System.FP_WAKE_UNLOCK,
+        Settings.System.VOLUME_DIALOG_TIMEOUT,
     };
 }
