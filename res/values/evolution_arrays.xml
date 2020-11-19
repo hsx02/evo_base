@@ -206,4 +206,13 @@
         <item>1800</item>
         <item>3600</item>
     </string-array>
+
+    <!-- Fp wake unlock -->
+    <string-array name="fp_wake_unlock_preference_titles">
+       <!-- 0: Touch -->
+       <item>@string/fp_wake_unlock_touch</item>
+       <!-- 1: Press -->
+       <item>@string/fp_wake_unlock_press</item>
+    </string-array>
+
 </resources>
