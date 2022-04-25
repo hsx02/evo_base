@@ -680,7 +680,7 @@
     <string name="qs_tint_title">QS tile tint style</string>
     <string name="qs_tint_accent">Accent color</string>
 
-    <!-- Lock screen Clocks -->
+    <!-- Lock screen Clocks
     <string name="clock_show_status_area">Show status area (weather etc.)</string>
     <string name="clock_show_status_area_summary">Show the extra row of info under the lock screen clock (SysUI restart may be required)</string>
     <string name="lock_screen_custom_clock_face_category">Lock screen Clock</string>
@@ -710,7 +710,7 @@
     <string name="lock_screen_custom_clock_face_spectrum">Spectrum</string>
     <string name="lock_screen_custom_clock_face_sticker_tag">Sticker Tag</string>
     <string name="lock_screen_custom_clock_face_typographic">Typographic</string>
-    <string name="lock_screen_custom_clock_face_typographic_alt">Typographic (Center)</string>
+    <string name="lock_screen_custom_clock_face_typographic_alt">Typographic (Center)</string>-->
 
     <!-- Volume rocker gestures -->
     <string name="volume_skiptrack_screen_title">Skip music tracks</string>
@@ -1324,4 +1324,12 @@
     <!-- Statusbar colored icons -->
     <string name="statusbar_colored_icons_title">Colored icons</string>
     <string name="statusbar_colored_icons_summary">Use proper app icons for notification icons in status bar</string>
+
+    <!-- Lockscreen Clocks -->
+    <string name="lock_screen_custom_clock_face_title">Lockscreen clock style</string>
+    <string name="lock_screen_custom_clock_face_default">Default</string>
+    <string name="lock_screen_custom_clock_face_sfunny">Sfuny</string>
+    <string name="lock_screen_custom_clock_face_oos">OOS</string>
+    <string name="lock_screen_custom_clock_face_clockertino">Clockertino</string>
+
 </resources>
