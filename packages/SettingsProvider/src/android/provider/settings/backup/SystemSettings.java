@@ -87,6 +87,7 @@ public class SystemSettings {
         Settings.System.NAVIGATION_BAR_INVERSE,
         Settings.System.GESTURE_NAVBAR_RADIUS,
         Settings.System.SHOW_FOURG_ICON,
+        Settings.System.STATUS_BAR_NOTIF_COUNT,
         Settings.System.USE_OLD_MOBILETYPE,
         Settings.System.ENABLE_RIPPLE_EFFECT,
         Settings.System.DOZE_ON_CHARGE,

@@ -418,6 +418,7 @@ public class MediaControlPanel {
         ImageView appIconView = mPlayerViewHolder.getAppIcon();
             setVisibleAndAlpha(collapsedSet, R.id.icon, true);
             setVisibleAndAlpha(expandedSet, R.id.icon, useBgAlbumArt);
+            setVisibleAndAlpha(expandedSet, R.id.icon, mArtworkSettings.getEnabled());
             appIconView.clearColorFilter();
             if (data.getAppIcon() != null && !data.getResumption()) {
                 appIconView.setImageIcon(data.getAppIcon());

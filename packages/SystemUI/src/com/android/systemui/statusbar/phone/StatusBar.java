@@ -4458,6 +4458,9 @@ public class StatusBar extends SystemUI implements
                     Settings.System.STATUS_BAR_QUICK_QS_PULLDOWN),
                     false, this, UserHandle.USER_ALL);
             resolver.registerContentObserver(Settings.System.getUriFor(
+                    Settings.System.LOCKSCREEN_MEDIA_BLUR),
+                    false, this, UserHandle.USER_ALL);
+            resolver.registerContentObserver(Settings.System.getUriFor(
                     Settings.System.HEADS_UP_STOPLIST_VALUES),
                     false, this, UserHandle.USER_ALL);
             resolver.registerContentObserver(Settings.System.getUriFor(
@@ -4480,6 +4483,9 @@ public class StatusBar extends SystemUI implements
                     Settings.System.STATUS_BAR_QUICK_QS_PULLDOWN))) {
                 setStatusBarWindowViewOptions();
             } else if (uri.equals(Settings.System.getUriFor(
+                    Settings.System.LOCKSCREEN_MEDIA_BLUR))) {
+                setLockScreenMediaBlurLevel();
+            } else if (uri.equals(Settings.System.getUriFor(
                     Settings.System.HEADS_UP_STOPLIST_VALUES))) {
                 setHeadsUpStoplist();
             } else if (uri.equals(Settings.System.getUriFor(
@@ -4494,6 +4500,7 @@ public class StatusBar extends SystemUI implements
         public void update() {
             setDoubleTapToSleepGesture();
             setStatusBarWindowViewOptions();
+            setLockScreenMediaBlurLevel();
             setHeadsUpStoplist();
             setHeadsUpBlacklist();
             setBrightnessControl();
@@ -4509,6 +4516,12 @@ public class StatusBar extends SystemUI implements
     private void setStatusBarWindowViewOptions() {
         if (mNotificationShadeWindowViewController != null) {
             mNotificationShadeWindowViewController.setStatusBarWindowViewOptions();
+        }
+    }
+
+    private void setLockScreenMediaBlurLevel() {
+        if (mMediaManager != null) {
+            mMediaManager.setLockScreenMediaBlurLevel();
         }
     }
 
