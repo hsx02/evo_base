@@ -200,6 +200,7 @@ public class AnimatableClockController extends ViewController<AnimatableClockVie
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     /**
      * Check if font is broken
      */
@@ -222,6 +223,8 @@ public class AnimatableClockController extends ViewController<AnimatableClockVie
     
 =======
 >>>>>>> parent of 307394e6a62e... SystemUI: Lockscreen clock improvements
+=======
+>>>>>>> parent of 307394e6a62e... SystemUI: Lockscreen clock improvements
     private void updateLocale() {
         Locale currLocale = Locale.getDefault();
         if (!Objects.equals(currLocale, mLocale)) {
@@ -238,12 +241,15 @@ public class AnimatableClockController extends ViewController<AnimatableClockVie
 
     private void initColors() {
 <<<<<<< HEAD
+<<<<<<< HEAD
         boolean isSecondaryColor = Settings.System.getIntForUser(getContext().getContentResolver(),
                 Settings.System.SECONDARY_COLOR_CLOCK, 0, UserHandle.USER_CURRENT) != 0;
         if (isSecondaryColor) {
         mLockScreenColor = Utils.getColorAttrDefaultColor(getContext(),
                 com.android.systemui.R.attr.wallpaperTextColorSecondary);
         } else {
+=======
+>>>>>>> parent of 307394e6a62e... SystemUI: Lockscreen clock improvements
 =======
 >>>>>>> parent of 307394e6a62e... SystemUI: Lockscreen clock improvements
         mLockScreenColor = Utils.getColorAttrDefaultColor(getContext(),
