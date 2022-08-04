@@ -497,6 +497,10 @@
     <string name="copied_to_clipboard">Copied to clipboard</string>
     <string name="longpress_to_clipboard">Long-press to copy</string>
 
+    <!-- Screen off FOD -->
+    <string name="screen_off_fod_title">Screen off FOD</string>
+    <string name="screen_off_fod_summary">Keep FOD enabled when the screen is off</string>
+
     <!-- Display Settings: Title of the setting which toggles wallpaper zooming effects on interraction -->
     <string name="wallpaper_zoom_effect_title">Wallpaper zoom effect</string>
     <!-- Display Settings: Subtitle of the setting which toggles wallpaper zooming effects on interraction -->
