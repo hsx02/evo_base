@@ -526,11 +526,6 @@
     <string name="battery_24_hrs_stats_title" translatable="false">24-hour battery usage</string>
     <string name="battery_24_hrs_stats_summary" translatable="false">View usage for past 24 hours</string>
 
-    <!-- Preference and settings suggestion title text for screen off UDFPS  (device) [CHAR LIMIT=60]-->
-    <string name="ambient_display_screen_off_udfps_title">Long press on fingerprint sensor to unlock device</string>
-    <!-- Summary text for screen off UDFPS [CHAR LIMIT=NONE]-->
-    <string name="ambient_display_screen_off_udfps_summary">To wake up your screen and unlock, long press your under-display fingerprint sensor.</string>
-
     <!-- Battery health -->
     <string name="current_battery_capacity">Current capacity</string>
     <string name="designed_battery_capacity">Designed capacity</string>
@@ -552,5 +547,4 @@
 
     <!-- String for removal of sensitive info on about, depending on tap -->
     <string name="device_info_protected_single_press">Tap to show info</string>
-
 </resources>
