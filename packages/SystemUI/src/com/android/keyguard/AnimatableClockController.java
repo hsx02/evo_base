@@ -64,7 +64,6 @@ public class AnimatableClockController extends ViewController<AnimatableClockVie
     private final String mBurmeseNumerals;
     private final float mBurmeseLineSpacing;
     private final float mDefaultLineSpacing;
-    private final float mBrokenFontLineSpacing;
 
     public AnimatableClockController(
             AnimatableClockView view,
@@ -85,8 +84,6 @@ public class AnimatableClockController extends ViewController<AnimatableClockVie
                 R.dimen.keyguard_clock_line_spacing_scale_burmese);
         mDefaultLineSpacing = resources.getFloat(
                 R.dimen.keyguard_clock_line_spacing_scale);
-        mBrokenFontLineSpacing = resources.getFloat(
-                R.dimen.keyguard_clock_line_spacing_scale_broken);
     }
 
     private void reset() {
@@ -202,6 +199,7 @@ public class AnimatableClockController extends ViewController<AnimatableClockVie
         return mIsDozing;
     }
 
+<<<<<<< HEAD
     /**
      * Check if font is broken
      */
@@ -222,16 +220,15 @@ public class AnimatableClockController extends ViewController<AnimatableClockVie
         }
     }
     
+=======
+>>>>>>> parent of 307394e6a62e... SystemUI: Lockscreen clock improvements
     private void updateLocale() {
         Locale currLocale = Locale.getDefault();
-        boolean mIsBrokenFont = isBrokenFont();
         if (!Objects.equals(currLocale, mLocale)) {
             mLocale = currLocale;
             NumberFormat nf = NumberFormat.getInstance(mLocale);
             if (nf.format(FORMAT_NUMBER).equals(mBurmeseNumerals)) {
                 mView.setLineSpacingScale(mBurmeseLineSpacing);
-            } else if (mIsBrokenFont && !nf.format(FORMAT_NUMBER).equals(mBurmeseNumerals)) {
-                mView.setLineSpacingScale(mBrokenFontLineSpacing);
             } else {
                 mView.setLineSpacingScale(mDefaultLineSpacing);
             }
@@ -240,15 +237,17 @@ public class AnimatableClockController extends ViewController<AnimatableClockVie
     }
 
     private void initColors() {
+<<<<<<< HEAD
         boolean isSecondaryColor = Settings.System.getIntForUser(getContext().getContentResolver(),
                 Settings.System.SECONDARY_COLOR_CLOCK, 0, UserHandle.USER_CURRENT) != 0;
         if (isSecondaryColor) {
         mLockScreenColor = Utils.getColorAttrDefaultColor(getContext(),
                 com.android.systemui.R.attr.wallpaperTextColorSecondary);
         } else {
+=======
+>>>>>>> parent of 307394e6a62e... SystemUI: Lockscreen clock improvements
         mLockScreenColor = Utils.getColorAttrDefaultColor(getContext(),
                 com.android.systemui.R.attr.wallpaperTextColorAccent);
-        }
         mView.setColors(mDozingColor, mLockScreenColor);
         mView.animateDoze(mIsDozing, false);
     }
