@@ -82,7 +82,6 @@ android_library {
     },
     resource_dirs: [
         "res",
-        "res-blur",
         "res-hwkeys",
         "res-keyguard",
         "res-pixel",
@@ -130,7 +129,6 @@ android_library {
         "SystemUIGoogle-lib",
         "android.frameworks.stats-V1-java",
         "vendor-pixelatoms-java",
-        "AndroidSystemBlur",
     ],
     manifest: "AndroidManifest.xml",
     additional_manifests: ["SystemUIGoogle-Manifest.xml"],
