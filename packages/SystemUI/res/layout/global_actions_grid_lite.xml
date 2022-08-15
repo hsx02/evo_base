@@ -37,6 +37,7 @@
     <com.zhenxiang.blur.WindowBlurFrameLayout
       android:layout_width="wrap_content"
       android:layout_height="wrap_content"
+      app:backgroundColour="@color/global_actions_lite_background"
       app:cornerRadius="@dimen/global_actions_corner_radius"
       app:blurRadius="@integer/background_blur_radius"
       app:blurBackgroundColourOpacity="@dimen/background_blur_colour_opacity">
