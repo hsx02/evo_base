@@ -279,7 +279,3 @@ endif
 # Seedvault
 PRODUCT_PACKAGES += \
     Seedvault
-
-# TouchGestures
-PRODUCT_PACKAGES += \
-    TouchGestures
