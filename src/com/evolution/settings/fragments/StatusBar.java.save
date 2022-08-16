@@ -61,6 +61,7 @@ public class StatusBar extends SettingsPreferenceFragment implements
     private static final String KEY_USE_OLD_MOBILETYPE = "use_old_mobiletype";
     private static final String STATUS_BAR_CLOCK_STYLE = "status_bar_clock";
     private static final String SYSTEMUI_PACKAGE = "com.android.systemui";
+    private static final String PREF_CLOCK_BG = "statusbar_clock_chip";
 
     private static final int BATTERY_STYLE_PORTRAIT = 0;
     private static final int BATTERY_STYLE_TEXT = 4;
@@ -78,6 +79,7 @@ public class StatusBar extends SettingsPreferenceFragment implements
     private SystemSettingListPreference mBatteryPercent;
     private SystemSettingListPreference mBatteryStyle;
     private SystemSettingListPreference mStatusBarClock;
+    private SwitchPreference mStatusBarClockBG;
 
     @Override
     public void onCreate(Bundle icicle) {
@@ -132,11 +134,6 @@ public class StatusBar extends SettingsPreferenceFragment implements
         if (getResources().getConfiguration().getLayoutDirection() == View.LAYOUT_DIRECTION_RTL) {
             mStatusBarClock.setEntries(R.array.status_bar_clock_position_entries_rtl);
             mStatusBarClock.setEntryValues(R.array.status_bar_clock_position_values_rtl);
-
-        mStatusBarClockBG = (SwitchPreference) findPreference(PREF_CLOCK_BG);
-        mStatusBarClockBG.setChecked((Settings.System.getInt(getActivity()
-                .getContentResolver(), Settings.System.STATUSBAR_CLOCK_CHIP, 1) == 1));
-        mStatusBarClockBG.setOnPreferenceChangeListener(this);
         }
     }
 
@@ -151,11 +148,6 @@ public class StatusBar extends SettingsPreferenceFragment implements
                     value != BATTERY_STYLE_TEXT && value != BATTERY_STYLE_HIDDEN);
             mBatteryTextCharging.setEnabled(value == BATTERY_STYLE_HIDDEN ||
                     (value != BATTERY_STYLE_TEXT && batterypercent != 2));
-            return true;
-        } else if (preference == mStatusBarClockBG) {
-            boolean value = (Boolean) newValue;
-            Settings.System.putInt(getActivity().getContentResolver(),
-                    Settings.System.STATUSBAR_CLOCK_CHIP, value ? 1 : 0);
             return true;
         } else if (preference == mBatteryPercent) {
             int value = Integer.parseInt((String) newValue);
