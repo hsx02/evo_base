@@ -24,6 +24,7 @@ import android.annotation.Nullable;
 import android.content.ComponentName;
 import android.content.res.Configuration;
 import android.metrics.LogMaker;
+import android.os.Handler;
 import android.provider.Settings;
 import android.view.View;
 
@@ -73,6 +74,7 @@ public abstract class QSPanelControllerBase<T extends QSPanel> extends ViewContr
     private final DumpManager mDumpManager;
     protected final ArrayList<TileRecord> mRecords = new ArrayList<>();
     protected boolean mShouldUseSplitNotificationShade;
+    private Handler mHandler = new Handler();
 
     @Nullable
     private Consumer<Boolean> mMediaVisibilityChangedListener;
@@ -94,6 +96,8 @@ public abstract class QSPanelControllerBase<T extends QSPanel> extends ViewContr
                     if (newConfig.orientation != mLastOrientation) {
                         mLastOrientation = newConfig.orientation;
                         switchTileLayout(false);
+                        // emulate settings change
+                        mHandler.post(() -> { onIntSettingChanged("", 0); });
                     }
                 }
             };
