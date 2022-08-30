@@ -57,7 +57,6 @@ android_library {
         "res",
         "res-pixel",
         "Evolver/res",
-        "TouchGestures/res"
     ],
 
     static_libs: [
