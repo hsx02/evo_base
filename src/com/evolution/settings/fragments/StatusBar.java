@@ -132,11 +132,6 @@ public class StatusBar extends SettingsPreferenceFragment implements
         if (getResources().getConfiguration().getLayoutDirection() == View.LAYOUT_DIRECTION_RTL) {
             mStatusBarClock.setEntries(R.array.status_bar_clock_position_entries_rtl);
             mStatusBarClock.setEntryValues(R.array.status_bar_clock_position_values_rtl);
-
-        mStatusBarClockBG = (SwitchPreference) findPreference(PREF_CLOCK_BG);
-        mStatusBarClockBG.setChecked((Settings.System.getInt(getActivity()
-                .getContentResolver(), Settings.System.STATUSBAR_CLOCK_CHIP, 1) == 1));
-        mStatusBarClockBG.setOnPreferenceChangeListener(this);
         }
     }
 
@@ -151,11 +146,6 @@ public class StatusBar extends SettingsPreferenceFragment implements
                     value != BATTERY_STYLE_TEXT && value != BATTERY_STYLE_HIDDEN);
             mBatteryTextCharging.setEnabled(value == BATTERY_STYLE_HIDDEN ||
                     (value != BATTERY_STYLE_TEXT && batterypercent != 2));
-            return true;
-        } else if (preference == mStatusBarClockBG) {
-            boolean value = (Boolean) newValue;
-            Settings.System.putInt(getActivity().getContentResolver(),
-                    Settings.System.STATUSBAR_CLOCK_CHIP, value ? 1 : 0);
             return true;
         } else if (preference == mBatteryPercent) {
             int value = Integer.parseInt((String) newValue);
