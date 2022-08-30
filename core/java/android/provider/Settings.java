@@ -6805,14 +6805,6 @@ public final class Settings {
         public static final String STATUSBAR_NOTIF_COUNT = "statusbar_notif_count";
 
         /**
-         * Statusbar clock background
-         * 0 - hide accented chip
-         * 1 - show accented chip (default)
-         * @hide
-         */
-        public static final String STATUSBAR_CLOCK_CHIP = "statusbar_clock_chip";
-
-        /**
          * @hide
          */
         public static final String QS_TRANSPARENCY = "qs_transparency";
@@ -7065,7 +7057,6 @@ public final class Settings {
             PRIVATE_SETTINGS.add(MUSIC_TILE_TITLE);
             PRIVATE_SETTINGS.add(SENSOR_BLOCK);
             PRIVATE_SETTINGS.add(FP_UNLOCK_KEYSTORE);
-            PRIVATE_SETTINGS.add(STATUSBAR_CLOCK_CHIP);
         }
 
         /**
