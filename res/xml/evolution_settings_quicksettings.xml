@@ -172,7 +172,7 @@
             android:title="@string/qs_columns_portrait_title"
             android:max="7"
             settings:min="1"
-            settings:interval="0"
+            settings:interval="1"
             android:defaultValue="2" />
 
     </PreferenceCategory>
